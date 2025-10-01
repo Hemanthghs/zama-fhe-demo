@@ -84,85 +84,10 @@ For detailed instructions see:
    npx hardhat vars set ETHERSCAN_API_KEY
    ```
 
-3. **Compile and test**
 
-   ```bash
-   npm run compile
-   npm run test
-   ```
+## Setting Up the Contract
 
-4. **Deploy to local network**
-
-   ```bash
-   # Start a local FHEVM-ready node
-   npx hardhat node
-   
-   # Deploy to local network
-   npx hardhat deploy --network localhost
-   ```
-
-5. **Deploy to Sepolia Testnet**
-
-   ```bash
-   # Deploy to Sepolia
-   npx hardhat deploy --network sepolia
-   
-   # Verify contract on Etherscan
-   npx hardhat verify --network sepolia <CONTRACT_ADDRESS>
-   ```
-
-6. **Test on Sepolia Testnet**
-
-   ```bash
-   # Once deployed, you can run a simple test on Sepolia.
-   npx hardhat test --network sepolia
-   ```
-
-## 🎯 Usage
-
-### Interacting with the Private Balance Tracker
-
-Once deployed, you can interact with the contract using the following tasks:
-
-#### Local Network
-
-```bash
-# Check your encrypted balance
-npx hardhat --network localhost task:decrypt-balance
-
-# Deposit encrypted amount
-npx hardhat --network localhost task:deposit --value 100
-
-# Withdraw encrypted amount
-npx hardhat --network localhost task:withdraw --value 50
-
-# Check balance again
-npx hardhat --network localhost task:decrypt-balance
-```
-
-#### Sepolia Testnet
-
-```bash
-# Check your encrypted balance
-npx hardhat --network sepolia task:decrypt-balance
-
-# Deposit encrypted amount
-npx hardhat --network sepolia task:deposit --value 100
-
-# Withdraw encrypted amount
-npx hardhat --network sepolia task:withdraw --value 50
-
-# Check balance again
-npx hardhat --network sepolia task:decrypt-balance
-```
-
-#### Get Contract Address
-
-```bash
-# Get deployed contract address
-npx hardhat --network localhost task:address
-npx hardhat --network sepolia task:address
-```
+Let's break down our `PrivateBalanceTracker` contract step by step.
 
 ## 📁 Project Structure
 
@@ -177,11 +102,6 @@ private-balance-tracker/
 ├── hardhat.config.ts              # Hardhat configuration
 └── package.json                   # Dependencies and scripts
 ```
-
-
-## Setting Up the Contract
-
-Let's break down our `PrivateBalanceTracker` contract step by step.
 
 ### 1. Imports and Contract Declaration
 
@@ -298,6 +218,90 @@ The withdrawal function mirrors the deposit logic but uses `FHE.sub()` for homom
 ```
 Encrypted(150) - Encrypted(50) = Encrypted(100)
 ```
+
+3. **Compile and test**
+
+   ```bash
+   npm run compile
+   npm run test
+   ```
+
+4. **Deploy to local network**
+
+   ```bash
+   # Start a local FHEVM-ready node
+   npx hardhat node
+   
+   # Deploy to local network
+   npx hardhat deploy --network localhost
+   ```
+
+5. **Deploy to Sepolia Testnet**
+
+   ```bash
+   # Deploy to Sepolia
+   npx hardhat deploy --network sepolia
+   
+   # Verify contract on Etherscan
+   npx hardhat verify --network sepolia <CONTRACT_ADDRESS>
+   ```
+
+6. **Test on Sepolia Testnet**
+
+   ```bash
+   # Once deployed, you can run a simple test on Sepolia.
+   npx hardhat test --network sepolia
+   ```
+
+## 🎯 Usage
+
+### Interacting with the Private Balance Tracker
+
+Once deployed, you can interact with the contract using the following tasks:
+
+#### Local Network
+
+```bash
+# Check your encrypted balance
+npx hardhat --network localhost task:decrypt-balance
+
+# Deposit encrypted amount
+npx hardhat --network localhost task:deposit --value 100
+
+# Withdraw encrypted amount
+npx hardhat --network localhost task:withdraw --value 50
+
+# Check balance again
+npx hardhat --network localhost task:decrypt-balance
+```
+
+#### Sepolia Testnet
+
+```bash
+# Check your encrypted balance
+npx hardhat --network sepolia task:decrypt-balance
+
+# Deposit encrypted amount
+npx hardhat --network sepolia task:deposit --value 100
+
+# Withdraw encrypted amount
+npx hardhat --network sepolia task:withdraw --value 50
+
+# Check balance again
+npx hardhat --network sepolia task:decrypt-balance
+```
+
+#### Get Contract Address
+
+```bash
+# Get deployed contract address
+npx hardhat --network localhost task:address
+npx hardhat --network sepolia task:address
+```
+
+
+
+
 
 Again, all operations happen on encrypted data, maintaining complete privacy.
 
