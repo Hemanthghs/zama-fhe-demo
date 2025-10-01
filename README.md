@@ -299,8 +299,19 @@ npx hardhat --network localhost task:address
 npx hardhat --network sepolia task:address
 ```
 
+## Demo
 
+<img width="1195" height="219" alt="image" src="https://github.com/user-attachments/assets/217d0821-7f30-44ab-9bb5-cfdac6104d88" />
 
+<img width="1164" height="144" alt="image" src="https://github.com/user-attachments/assets/1aaaa24e-4dbd-44d4-aa05-4db9bf88f255" />
+
+<img width="1249" height="192" alt="image" src="https://github.com/user-attachments/assets/c6c4ebef-6a99-46e6-bea3-2e699e979481" />
+
+<img width="1249" height="192" alt="image" src="https://github.com/user-attachments/assets/8f7e3b15-9e8c-495e-a478-847f58982a08" />
+
+<img width="1249" height="192" alt="image" src="https://github.com/user-attachments/assets/5cac5585-704d-4c44-9d1c-bca51d34e057" />
+
+<img width="1249" height="192" alt="image" src="https://github.com/user-attachments/assets/c80031ce-1cf4-4792-937a-1fcc73bedaa5" />
 
 
 Again, all operations happen on encrypted data, maintaining complete privacy.
